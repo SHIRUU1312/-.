@@ -76,7 +76,11 @@ for (var key of params.keys()){
 document.querySelector(".id_own_image").style.backgroundImage = `url(${data['image']})`;
 
 var birthday = data['birthday'];
-var birthdaySplit = birthday.split(".");
+if (typeof someVariable === "string") {
+    let parts = someVariable.split(" ");
+} else {
+    console.error("someVariable jest undefined:", someVariable);
+}
 var day = parseInt(birthdaySplit[0]);
 var month = parseInt(birthdaySplit[1]);
 var year = parseInt(birthdaySplit[2]);
