@@ -1,8 +1,9 @@
 
 var params = new URLSearchParams(window.location.search);
 
-function sendTo(url){
-    location.href = `/${url}?` + params;
+function sendTo(page) {
+    console.log("Przekierowanie do:", page); // Debugowanie
+    window.location.href = page + ".html"; // Sprawdź, czy plik istnieje
 }
 
 document.querySelectorAll(".bottom_element_grid").forEach((element) => {
