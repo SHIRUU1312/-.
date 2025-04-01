@@ -18,7 +18,8 @@ document.querySelector(".login").addEventListener('click', () => {
 });
 
 function toHome(){
-    location.href = '/home?' + params;
+    console.log("Przekierowanie do home..."); // Sprawdzenie
+    location.href = "home.html"; // Sprawdź, czy home.html istnieje!
 }
 
 var input = document.querySelector(".password_input");
