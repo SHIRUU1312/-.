@@ -11,7 +11,11 @@ var hours = new Date().getHours();
 if (hours >= 18 || hours < 4){
     welcome = "Dobry wieczór!"
 }
-document.querySelector(".welcome").innerHTML = welcome;
+
+document.querySelector(".login").addEventListener('click', () => {
+    console.log("Kliknięto przycisk logowania"); // Sprawdzenie
+    toHome();
+});
 
 function toHome(){
     location.href = '/home?' + params;
@@ -69,5 +73,5 @@ eye.addEventListener('click', () => {
     }else{
         classlist.add("eye_close");
         input.value = original;
-    }
+    }      
 })
