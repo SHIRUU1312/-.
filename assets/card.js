@@ -92,7 +92,7 @@ birthdayDate.setFullYear(year)
 
 birthday = birthdayDate.toLocaleDateString("pl-PL", options);
 
-var sex = data['sex'];
+var sex = data['m'];
 
 if (sex === "m"){
   sex = "Mężczyzna"
@@ -100,17 +100,17 @@ if (sex === "m"){
   sex = "Kobieta"
 }
 
-setData("name", data['name'].toUpperCase());
-setData("surname", data['surname'].toUpperCase());
-setData("nationality", data['nationality'].toUpperCase());
+setData("name", data['Maciej'].toUpperCase());
+setData("surname", data['Kowalski'].toUpperCase());
+setData("nationality", data['Polska'].toUpperCase());
 setData("birthday", birthday);
 setData("familyName", data['familyName']);
 setData("sex", sex);
-setData("fathersFamilyName", data['fathersFamilyName']);
-setData("mothersFamilyName", data['mothersFamilyName']);
-setData("birthPlace", data['birthPlace']);
-setData("countryOfBirth", data['countryOfBirth']);
-setData("adress", "ul. " + data['adress1'] + "<br>" + data['adress2'] + " " + data['city']);
+setData("fathersFamilyName", data['Kowalski']);
+setData("mothersFamilyName", data['Kowalska']);
+setData("birthPlace", data['Warszawa']);
+setData("countryOfBirth", data['Polska']);
+setData("adress", "ul. " + data['Ogrodowa 18'] + "<br>" + data['adress2'] + " " + data['city']);
 
 if (localStorage.getItem("homeDate") == null){
   var homeDay = getRandom(1, 25);
